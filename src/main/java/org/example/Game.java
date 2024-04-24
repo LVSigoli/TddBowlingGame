@@ -15,7 +15,7 @@ public class Game {
         int rollindex = 0;
         for (int i = 0; i < 10; i++) {
             if(rolls[rollindex] ==10){
-                score+= 10 + rolls[rollindex]+rolls[rollindex+1];
+                score+= 10 + rolls[rollindex+1] +rolls [rollindex+2];
                 rollindex++;
             }
             else if (rolls[rollindex] + rolls[rollindex + 1] == 10) {
