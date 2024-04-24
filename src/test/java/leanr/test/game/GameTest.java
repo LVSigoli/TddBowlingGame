@@ -27,6 +27,17 @@ void setup(){
         assertThat(game.score()).isEqualTo(40);
     }
 
+    @Test
+    @DisplayName("Should get bonus if spares")
+    void shouldGetBonusIfSpares() {
+        game.roll(3);
+        game.roll(7);
+        game.roll(7);
+        for (int i = 0; i < 17; i++) {
+            game.roll(0);
+        }
+        assertThat(game.score()).isEqualTo(24);
+    }
 
 
     private void rollMany(int pins){
