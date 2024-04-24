@@ -52,16 +52,17 @@ void setup(){
     @Test
     @DisplayName("Should get 300 if strike all frames")
     void shouldGet300IfStrikeAllFrames(){
-    rollMany(12,10);
-    assertThat(game.score()).isEqualTo(300);
+        rollMany(12,10);
+        assertThat(game.score()).isEqualTo(300);
     }
 
 
     private void rollMany( int numberOfRolls, int pins){
-    for(int i =0; i<numberOfRolls; i++){
-        game.roll(pins);
+        for(int i =0; i<numberOfRolls; i++){
+            game.roll(pins);
+        }
     }
-    }
+
     private void rollSpare() {
         game.roll(3);
         game.roll(7);
